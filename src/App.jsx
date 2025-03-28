@@ -1,19 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-
+import { ToastContainer } from "react-toastify";
 
 function App() {
- return(
+  return (
     <div>
-        <Navbar/>
-        <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home />} />
-        </Routes>
-        </BrowserRouter>
+      <ToastContainer/>
+      <Navbar />
+      <Outlet />
     </div>
- )
+  );
 }
 
 export default App;
